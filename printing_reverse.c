@@ -9,6 +9,10 @@ void printf_array(int a[], int start, int n)
         printf_array(a, start+1, n);
     }
 }
+int printArr(int *a,int n){
+     for (int i = 0; i < n; i++)
+        printf(" %d ", a[i]);
+}
 int main()
 {
     int n, a[10];
@@ -19,5 +23,6 @@ int main()
         scanf("%d", &a[i]);
     printf("The elements are\n");
     printf_array(a, 0, n);
+    printArr(&a,n);
     return 0;
 }
